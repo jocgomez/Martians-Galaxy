@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: 00000000000000000000000000000000
+  productGUID: 3825f19424d7c2d40a33923d7d9a5272
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -672,7 +672,7 @@ PlayerSettings:
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 699a1ca8-ead0-4751-ac15-efd064b986b0
-  projectName: Platformer
+  projectName: Martians Galaxy (1)
   organizationId: unity_zkcthw5dsx9kbq
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
