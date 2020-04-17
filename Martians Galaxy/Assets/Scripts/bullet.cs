@@ -7,6 +7,7 @@ public class bullet : MonoBehaviour {
     public float speed = 20f;
     public int damage = 40;
     public Rigidbody2D rb;
+    public GameObject impactEffect;
 	
 	// Update is called once per frame
 	void Update () {
@@ -22,6 +23,7 @@ public class bullet : MonoBehaviour {
         {
             enemy.TakeDamage(damage);
         }
+        Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }
