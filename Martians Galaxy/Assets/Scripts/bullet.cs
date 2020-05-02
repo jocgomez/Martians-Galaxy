@@ -9,19 +9,12 @@ public class bullet : MonoBehaviour {
     public Rigidbody2D rb;
     public GameObject impactEffect;
 
-    //private float tiempoHit = 0;
-    //private float duracion;
 	
 	// Update is called once per frame
 	void Update () {
 
         rb.velocity = transform.right * speed;
-        //duracion = Time.deltaTime - tiempoHit;
-        //if(duracion > 0 && duracion > 10 && duracion <9)
-        //{
-        //    Destroy(gameObject);
-        //    Destroy(impactEffect);
-        //}
+
 	}
 
     void OnTriggerEnter2D (Collider2D hitInfo)
@@ -34,8 +27,6 @@ public class bullet : MonoBehaviour {
         Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(gameObject);
         Destroy(impactEffect);
-
-        //tiempoHit = Time.deltaTime;
     }
 }
 
