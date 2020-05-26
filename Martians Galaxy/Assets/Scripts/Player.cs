@@ -23,9 +23,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (currentHealth==0)
+		if (Input.GetKeyDown(KeyCode.Space))
 		{
-            Time.timeScale = 0;
+			TakeDamage(20);
 		}
     }
 
