@@ -5,30 +5,43 @@ using Pathfinding;
 
 public class Enemy : MonoBehaviour {
 
-	public int health = 100;
-	public GameObject deathEffect;
+    public int health = 100;
+    public GameObject deathEffect;
     public GameObject vida;
     public float probabilidadVida = 20f;
-    public GameObject materiales;    
+    public GameObject materiales;
     public float probabilidadMateriales = 10f;
     public AIPath aiPath;
 
     private float probV;
     private float probM;
 
-    public void TakeDamage (int damage)
-	{
-		health -= damage;
+    private Animator anim;
+    private Rigidbody2D rb2d;
 
-		if (health <= 0)
-		{
-			Die();
-		}
-	}
+    private RigidbodyConstraints2D rbc2d;
 
-	void Die ()
-	{
-		Instantiate(deathEffect, transform.position, Quaternion.identity);
+    void Start()
+    {
+        rb2d = GetComponent<Rigidbody2D>();
+        rbc2d = rb2d.constraints;
+        anim = GetComponent<Animator>();
+        anim.SetFloat("speed", 0.2f);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Instantiate(deathEffect, transform.position, Quaternion.identity);
         probV = Random.Range(0f, 100f);
         probM = Random.Range(0f, 100f);
 
@@ -43,17 +56,36 @@ public class Enemy : MonoBehaviour {
         }
 
         Destroy(gameObject);
-        
-	}
+
+    }
 
     public void Update()
     {
-    if(aiPath.desiredVelocity.x >= 0.01f)
+        if (aiPath.desiredVelocity.x >= 0.01f)
         {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-        }else if(aiPath.desiredVelocity.x <= -0.01f)
+            transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
+        } else if (aiPath.desiredVelocity.x <= -0.01f)
         {
-            transform.localScale = new Vector3(1f, 1f, 1f);
+            transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        }
+
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
+            anim.SetFloat("speed", 0);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            anim.SetFloat("speed", 0.2f);
+            rb2d.constraints = rbc2d;
         }
     }
 
