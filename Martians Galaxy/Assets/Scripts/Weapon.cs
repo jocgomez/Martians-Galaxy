@@ -6,13 +6,21 @@ public class Weapon : MonoBehaviour {
 
     public Transform firePoint;
     public GameObject bulletPrefab;
+    float secondsCounter=0;
+   float secondsToCount=0.3f;
 
 	// Update is called once per frame
 	void Update () {
 
-        if(Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1"))
         {
-            Shoot();
+
+                  secondsCounter += Time.deltaTime;
+            if (secondsCounter >= secondsToCount)
+            {
+                secondsCounter = 0;
+                Shoot();
+            }
         }
 		
 	}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Enemy : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class Enemy : MonoBehaviour {
     public float probabilidadVida = 20f;
     public GameObject materiales;    
     public float probabilidadMateriales = 10f;
+    public AIPath aiPath;
 
     private float probV;
     private float probM;
@@ -43,5 +45,16 @@ public class Enemy : MonoBehaviour {
         Destroy(gameObject);
         
 	}
+
+    public void Update()
+    {
+    if(aiPath.desiredVelocity.x >= 0.01f)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }else if(aiPath.desiredVelocity.x <= -0.01f)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+    }
 
 }
