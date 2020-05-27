@@ -113,6 +113,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &56119286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1545888456807972, guid: 2669249cdffae66439e57465eddea278,
+    type: 2}
+  m_PrefabInternal: {fileID: 1351226363}
 --- !u!1 &79866825
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,9 +453,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 1079930898151826, guid: 80a04391d003da74daf58a217169a482, type: 2}
-  - {fileID: 1242654777648584, guid: ee656a4d2f755fc46bbb159c05bf3b98, type: 2}
-  - {fileID: 1349849219065940, guid: fba414848fb7b8048bd21959b0eb8278, type: 2}
+  - {fileID: 570988682}
+  - {fileID: 56119286}
+  - {fileID: 2060554143}
   spawnPoint:
   - {fileID: 1773477469}
   - {fileID: 461607443}
@@ -1268,7 +1273,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.064716, y: -0.013398886, z: -10.022031}
+  m_LocalPosition: {x: -9.064717, y: -0.013397932, z: -10.022031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 528196845}
@@ -1445,6 +1450,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &570988682 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1539824663111100, guid: 0d20384bf887d5e4ba37031c4f3f8c1b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1961308788}
 --- !u!1 &609180952
 GameObject:
   m_ObjectHideFlags: 0
@@ -4637,6 +4647,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1961308788}
   m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+--- !u!1 &2060554143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1783328308753842, guid: 6808b75d17edaa94d90b26e5d8c4546e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1509512685}
 --- !u!1 &2100962439 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1149904716441508, guid: f9aeb5abd986f4b44b380efc4f502aef,
