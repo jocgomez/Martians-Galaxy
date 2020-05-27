@@ -17,3 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/2DPlatformer/Scenes/MainMenuScene.unity
     guid: 57185a2dae9f2f04baf5629d7fd3a173
+  - enabled: 1
+    path: Assets/Scenes/Pantalla inicio.unity
+    guid: aa522b491414da040a8e5cb42cb67c67
+  - enabled: 1
+    path: Assets/Scenes/AnimV3.unity
+    guid: 71d984e78755f904f9a5b6e45968dac6
+  - enabled: 1
+    path: Assets/Scenes/AnimV1.unity
+    guid: 64ed7baf8efb99f4fb58d686b5a73a0e
+  m_configObjects: {}

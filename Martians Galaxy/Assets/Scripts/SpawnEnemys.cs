@@ -25,12 +25,12 @@ public class SpawnEnemys : MonoBehaviour {
         {
             randomEnemy = Random.Range(0, enemies.Length);
             randomPosition = Random.Range(0, spawnPoint.Length);
-            Instantiate(enemies[randomEnemy], spawnPoint[randomEnemy].transform.position, Quaternion.identity);
+            Instantiate(enemies[randomEnemy], spawnPoint[randomPosition].transform.position, Quaternion.identity);
             timeBtwSpawns = startTimeBtwSpawn;
         }
         else
         {
-            timeBtwSpawns = Time.deltaTime;
+            timeBtwSpawns -= Time.deltaTime;
         }
 		
 	}
