@@ -18,7 +18,6 @@ public class Enemy : MonoBehaviour {
 
     private Animator anim;
     private Rigidbody2D rb2d;
-
     private RigidbodyConstraints2D rbc2d;
 
     void Start()
@@ -45,6 +44,9 @@ public class Enemy : MonoBehaviour {
         probV = Random.Range(0f, 100f);
         probM = Random.Range(0f, 100f);
 
+        Player personaje = GameObject.Find("Cuerpo").GetComponent<Player>();
+        personaje.contadorMuertesEnemigos();
+
         if (probV <= probabilidadVida)
         {
             Instantiate(vida, transform.position, Quaternion.identity);
@@ -54,7 +56,6 @@ public class Enemy : MonoBehaviour {
         {
             Instantiate(materiales, transform.position, Quaternion.identity);
         }
-
         Destroy(gameObject);
 
     }

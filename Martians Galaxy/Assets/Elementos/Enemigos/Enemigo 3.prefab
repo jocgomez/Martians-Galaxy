@@ -290,7 +290,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 1
+  maxSpeed: 3
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -331,13 +331,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae776ef7fb190534dbfbb90484a1a9db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 120
   deathEffect: {fileID: 1755349173569476, guid: 3c45864be6a059a4a82a25e285298338,
     type: 2}
   vida: {fileID: 1204554454303888, guid: d931c089ca12a0e4c8e4bf846a556f32, type: 2}
   probabilidadVida: 20
   materiales: {fileID: 1421793891676794, guid: a22495d9dcf5565448d1e2869c1678d1, type: 2}
-  probabilidadMateriales: 10
+  probabilidadMateriales: 5
   aiPath: {fileID: 0}
 --- !u!114 &114870688416992748
 MonoBehaviour:

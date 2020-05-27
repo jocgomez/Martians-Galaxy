@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public int maxHealth = 100;
+    public int currentHealth;
 
-	public int maxHealth = 100;
-	public int currentHealth;
-
-	public HealthBar healthBar;
+    public HealthBar healthBar;
     public mostrarMateriales barraMateriales;
     private int materiales;
+    private int contadorMuertes;
 
     // Start is called before the first frame update
     void Start()
     {
+        contadorMuertes = 0;
         materiales = 0;
 		currentHealth = maxHealth;
 		healthBar.SetMaxHealth(maxHealth);
@@ -50,5 +51,11 @@ public class Player : MonoBehaviour
     {
         materiales += 1;
         barraMateriales.mostrarM(materiales);
+    }
+
+    public void contadorMuertesEnemigos()
+    {
+        contadorMuertes += 1;
+        Debug.Log(contadorMuertes);
     }
 }
