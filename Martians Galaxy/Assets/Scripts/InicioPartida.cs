@@ -10,7 +10,7 @@ public class InicioPartida : MonoBehaviour {
 
 	public void botonIniciar()
 	{
-		SceneManager.LoadScene("AnimV3");
+		SceneManager.LoadScene("AnimV4");
 	}
 
 	public void salir()

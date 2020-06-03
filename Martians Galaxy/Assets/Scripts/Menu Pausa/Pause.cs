@@ -5,13 +5,17 @@ using UnityEngine;
 public class Pause : MonoBehaviour {
 
 
-	public GameObject visibility;
+	public GameObject pausaPrincipal;
+	public GameObject pausaControles;
+	public GameObject pausaObjetivos;
 	bool mostrar;
 
 	// Use this for initialization
 	void Start () {
 
-		visibility.gameObject.SetActive(false);
+		pausaPrincipal.gameObject.SetActive(false);
+		pausaControles.gameObject.SetActive(false);
+		pausaObjetivos.gameObject.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -31,13 +35,19 @@ public class Pause : MonoBehaviour {
 		if (Time.timeScale == 1)
 		{
 			Time.timeScale = 0;
-			visibility.gameObject.SetActive(true);
+			pausaPrincipal.gameObject.SetActive(true);
 		}
 		else
 		{
 			Time.timeScale = 1;
-			visibility.gameObject.SetActive(false);
+			pausaPrincipal.gameObject.SetActive(false);
 
 		}
+	}
+
+	public void reanudar()
+	{
+		pausaPrincipal.gameObject.SetActive(false);
+		Time.timeScale = 1;
 	}
 }

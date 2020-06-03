@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AnimV1.unity
     guid: 64ed7baf8efb99f4fb58d686b5a73a0e
+  - enabled: 1
+    path: Assets/Scenes/AnimV4.unity
+    guid: dd72eb2081c9e3844ab11fe75f0b89d6
   m_configObjects: {}

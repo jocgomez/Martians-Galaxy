@@ -15,12 +15,15 @@ public class PlayerController : MonoBehaviour {
     private bool move = false;
     private bool girar = true;
 
+    public AudioSource salto;
+
 
     // Use this for initialization
     void Start () {
 
         rb2d = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();        
+        anim = GetComponent<Animator>();
+        salto = GetComponent<AudioSource>();
 	}
 
     // Update is called once per frame
@@ -31,6 +34,8 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.UpArrow) && ground)
         {
             jump = true;
+            
+
         }
 
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
@@ -84,6 +89,8 @@ public class PlayerController : MonoBehaviour {
         {           
             rb2d.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             jump = false;
+            
+
         }
 
     }
