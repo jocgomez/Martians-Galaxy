@@ -5269,6 +5269,7 @@ MonoBehaviour:
   nivelCompletado: {fileID: 0}
   ASsonidoMuerteJefe: {fileID: 0}
   ASsonidoMuertePersonaje: {fileID: 0}
+  deathEffect: {fileID: 0}
   muertePersonaje: {fileID: 0}
 --- !u!1 &1341810983
 GameObject:

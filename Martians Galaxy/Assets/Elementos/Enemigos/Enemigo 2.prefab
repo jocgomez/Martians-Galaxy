@@ -282,8 +282,9 @@ MonoBehaviour:
   vida: {fileID: 1204554454303888, guid: d931c089ca12a0e4c8e4bf846a556f32, type: 2}
   probabilidadVida: 10
   materiales: {fileID: 1421793891676794, guid: a22495d9dcf5565448d1e2869c1678d1, type: 2}
-  probabilidadMateriales: 60
+  probabilidadMateriales: 35
   aiPath: {fileID: 114050492980879236}
+  isSkirmisher: 0
 --- !u!114 &114479566989150802
 MonoBehaviour:
   m_ObjectHideFlags: 1
