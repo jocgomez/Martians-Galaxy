@@ -5,28 +5,31 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/2DPlatformer/Scenes/Levels/Jungle_1_0.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/2DPlatformer/Scenes/Levels/SpaceWars_1_0.unity
     guid: deb06521fc5621b40b87d19f9952fd66
-  - enabled: 1
+  - enabled: 0
     path: Assets/2DPlatformer/Scenes/MainWorldScene.unity
     guid: 437f01eac8c4c86469e374441e4a4080
-  - enabled: 1
+  - enabled: 0
     path: Assets/2DPlatformer/Scenes/MainMenuScene.unity
     guid: 57185a2dae9f2f04baf5629d7fd3a173
   - enabled: 1
-    path: Assets/Scenes/Pantalla inicio.unity
+    path: Assets/Scenes/PantallaInicio.unity
     guid: aa522b491414da040a8e5cb42cb67c67
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AnimV3.unity
     guid: 71d984e78755f904f9a5b6e45968dac6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AnimV1.unity
     guid: 64ed7baf8efb99f4fb58d686b5a73a0e
   - enabled: 1
     path: Assets/Scenes/AnimV4.unity
     guid: dd72eb2081c9e3844ab11fe75f0b89d6
+  - enabled: 1
+    path: Assets/Scenes/AnimV5.unity
+    guid: d0bd7205197a2584e86fc462e1ca8206
   m_configObjects: {}

@@ -28,5 +28,7 @@ public class bullet : MonoBehaviour {
         Destroy(gameObject);
         Destroy(impactEffect);
     }
+
+
 }
 

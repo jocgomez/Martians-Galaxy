@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114050492980879236}
   - component: {fileID: 114975369577664818}
   - component: {fileID: 114831709608996692}
-  - component: {fileID: 114236782244136712}
+  - component: {fileID: 114143600204990536}
   m_Layer: 0
   m_Name: Enemigo 2
   m_TagString: Untagged
@@ -265,7 +265,7 @@ MonoBehaviour:
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
---- !u!114 &114236782244136712
+--- !u!114 &114143600204990536
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,8 +282,8 @@ MonoBehaviour:
   vida: {fileID: 1204554454303888, guid: d931c089ca12a0e4c8e4bf846a556f32, type: 2}
   probabilidadVida: 10
   materiales: {fileID: 1421793891676794, guid: a22495d9dcf5565448d1e2869c1678d1, type: 2}
-  probabilidadMateriales: 5
-  aiPath: {fileID: 0}
+  probabilidadMateriales: 60
+  aiPath: {fileID: 114050492980879236}
 --- !u!114 &114479566989150802
 MonoBehaviour:
   m_ObjectHideFlags: 1

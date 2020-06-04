@@ -12,13 +12,15 @@ public class Enemy : MonoBehaviour {
     public GameObject materiales;
     public float probabilidadMateriales = 10f;
     public AIPath aiPath;
-
+    public bool isSkirmisher;
+    
     private float probV;
     private float probM;
-
+    
     private Animator anim;
     private Rigidbody2D rb2d;
     private RigidbodyConstraints2D rbc2d;
+  
 
     void Start()
     {
@@ -26,14 +28,17 @@ public class Enemy : MonoBehaviour {
         rbc2d = rb2d.constraints;
         anim = GetComponent<Animator>();
         anim.SetFloat("speed", 0.2f);
+       
+
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage;
-
+        
         if (health <= 0)
         {
+            
             Die();
         }
     }
@@ -41,11 +46,18 @@ public class Enemy : MonoBehaviour {
     void Die()
     {
         Instantiate(deathEffect, transform.position, Quaternion.identity);
+       
         probV = Random.Range(0f, 100f);
         probM = Random.Range(0f, 100f);
 
         Player personaje = GameObject.Find("Cuerpo").GetComponent<Player>();
         personaje.contadorMuertesEnemigos();
+
+        if (isSkirmisher)
+        {
+            personaje.finalJuego();
+            
+        }
 
         if (probV <= probabilidadVida)
         {
@@ -89,5 +101,11 @@ public class Enemy : MonoBehaviour {
             rb2d.constraints = rbc2d;
         }
     }
+
+    
+        
+    
+
+    
 
 }

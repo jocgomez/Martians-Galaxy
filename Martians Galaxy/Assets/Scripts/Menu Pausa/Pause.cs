@@ -34,12 +34,12 @@ public class Pause : MonoBehaviour {
 	{
 		if (Time.timeScale == 1)
 		{
-			Time.timeScale = 0;
+			
 			pausaPrincipal.gameObject.SetActive(true);
 		}
 		else
 		{
-			Time.timeScale = 1;
+			
 			pausaPrincipal.gameObject.SetActive(false);
 
 		}

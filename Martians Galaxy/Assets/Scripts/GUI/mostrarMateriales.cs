@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class mostrarMateriales : MonoBehaviour {
 
-
+    public GameObject pasarAlJefe;
 	// Use this for initialization
 	void Start () {
-		
+        pasarAlJefe.gameObject.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -33,6 +33,8 @@ public class mostrarMateriales : MonoBehaviour {
                 break;
             case 5:
                 gameObject.transform.GetChild(4).gameObject.SetActive(true);
+                pasarAlJefe.gameObject.SetActive(true);
+                Time.timeScale = 0;
                 break;
         }
         
